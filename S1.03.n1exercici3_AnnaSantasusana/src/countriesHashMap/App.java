@@ -8,7 +8,7 @@ public class App {
 	public static void main(String[] args) {
 		
 		CountriesFile file = new CountriesFile();
-		
+	
 		HashMap<String, String> countries = file.importFile();
 		
 		String name = requestName();
@@ -44,7 +44,7 @@ public class App {
 			System.out.println("Which is the capital of " + randomCountry + "? Introduce it:");
 			capital = input.nextLine();
 			
-			if (capital.equals(countries.get(randomCountry))) {
+			if (capital.equalsIgnoreCase(countries.get(randomCountry))) {
 				points += 1;
 				
 			}
